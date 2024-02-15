@@ -9,6 +9,8 @@ const ghostContentAPI = require("@tryghost/content-api");
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 
+const moment = require('moment');
+
 // Init Ghost API
 const api = new ghostContentAPI({
   url: process.env.GHOST_API_URL,
@@ -18,7 +20,7 @@ const api = new ghostContentAPI({
 
 // Strip Ghost domain from urls
 const stripDomain = url => {
-  return url.replace(process.env.GHOST_API_URL, "");
+  return url.replace(process.env.GHOST_REPLACEMENT_URL, "");
 };
 
 module.exports = function(config) {
@@ -56,6 +58,11 @@ module.exports = function(config) {
   // Date formatting filter
   config.addFilter("htmlDateString", dateObj => {
     return new Date(dateObj).toISOString().split("T")[0];
+  });
+
+  // Date formatting filter
+  config.addFilter("strunkDateString", dateObj => {
+    return moment(dateObj).format("Do MMM YYYY");
   });
 
   // Don't ignore the same files ignored in the git repo

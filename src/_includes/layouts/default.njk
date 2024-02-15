@@ -3,15 +3,18 @@
     <head>
         <title>
             {%- if title -%}
-                {{ title }} – {{ site.title }}
+                {{ title }} - {{ site.title }}
             {%- else -%}
-                {{ site.title }} – {{ site.description }}
+                {{ site.title }} - {{ site.description }}
             {%- endif -%}
         </title>
         <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
         <meta name="robots" content="index,follow">
         <meta name="generator" content="Eleventy">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--Set UTF-8-->
+        <meta charset="utf-8" />
 
         {% if site.icon %}
             <link rel="shortcut icon" type="image/png" href="{{ site.icon }}"/>

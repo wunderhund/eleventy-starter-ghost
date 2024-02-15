@@ -1528,7 +1528,6 @@ electron-to-chromium@^1.3.830:
 
 eleventy-plugin-lazyimages@liamfiddler/eleventy-plugin-lazyimages:
   version "2.1.0"
-  uid "08c0624d7aa95f71ff3b4597ce84c3f67aeca759"
   resolved "https://codeload.github.com/liamfiddler/eleventy-plugin-lazyimages/tar.gz/08c0624d7aa95f71ff3b4597ce84c3f67aeca759"
   dependencies:
     jsdom "^16.4.0"
@@ -3134,6 +3133,11 @@ mkdirp@^0.5.1:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
+
+moment@^2.30.1:
+  version "2.30.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
+  integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
 
 moo@^0.5.1:
   version "0.5.1"

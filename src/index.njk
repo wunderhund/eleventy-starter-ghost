@@ -1,14 +1,14 @@
 ---
 pagination:
   data: collections.posts
-  size: 7
+  size: 10
   alias: posts
 ---
 
 {% extends 'layouts/default.njk' %}
 {% from "partials/card.njk" import card %}
 
-{% set title = "Posts" %}
+{% set title = "" %}
 
 {% block content %}
     <section class="post-feed">
